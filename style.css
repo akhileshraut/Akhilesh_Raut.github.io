@@ -13,7 +13,7 @@
     --text-main: #212529;
     --text-muted: #6c757d;
     --primary: #f2c811; /* Power BI Yellow Accent */
-    --secondary: #118d95; /* Teal contrast contrast color */
+    --secondary: #118d95; /* Teal contrast color */
     --dark-bg: #1f2421;
 }
 
@@ -123,7 +123,7 @@ nav a:hover {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Defaults to single column layout for clean flow */
+    grid-template-columns: 1fr;
     gap: 3rem;
 }
 
@@ -164,25 +164,6 @@ nav a:hover {
     right: 0;
     width: 100%;
     height: 100%;
-}
-
-.project-image-placeholder {
-    width: 100%;
-    height: 350px;
-    background: #eaeded;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--text-muted);
-    border-radius: 4px;
-    margin-bottom: 1.5rem;
-}
-
-.project-image-placeholder i {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: #bdc3c7;
 }
 
 .tags {
