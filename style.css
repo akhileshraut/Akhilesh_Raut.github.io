@@ -166,6 +166,7 @@ nav a:hover {
     height: 100%;
 }
 
+/* Dynamic Tags System */
 .tags {
     display: flex;
     flex-wrap: wrap;
@@ -181,30 +182,55 @@ nav a:hover {
     font-weight: 500;
 }
 
-/* Skills Layout */
+/* Modular Skill Profile Component Styling */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 1.5rem;
 }
 
 .skill-box {
     background: white;
-    padding: 2rem;
-    text-align: center;
+    padding: 1.5rem;
     border-radius: 6px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-    transition: transform 0.3s;
+    border-top: 3px solid var(--secondary);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .skill-box:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
-.skill-box i {
-    font-size: 2.5rem;
+.skill-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.skill-header i {
+    font-size: 1.4rem;
     color: var(--secondary);
-    margin-bottom: 1rem;
+}
+
+.skill-header h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--dark-bg);
+}
+
+.skill-box .tags span {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    color: #343a40;
+}
+
+/* Strategic Full-Width Layout for Soft Skills Box */
+.full-width-skill {
+    grid-column: 1 / -1;
+    border-top: 3px solid var(--primary);
 }
 
 /* Footer Section */
@@ -232,4 +258,5 @@ footer a {
     nav a { margin: 0 0.7rem; }
     .hero h1 { font-size: 2.2rem; }
     .projects-section, .skills-section { padding: 3rem 5%; }
+    .skills-grid { grid-template-columns: 1fr; }
 }
