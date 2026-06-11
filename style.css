@@ -1,312 +1,289 @@
-/* Reset & Base Variables */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    scroll-behavior: smooth;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analyst Portfolio | Akhilesh Raut</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
 
-:root {
-    --bg-color: #f8f9fa;
-    --card-bg: #ffffff;
-    --text-main: #212529;
-    --text-muted: #6c757d;
-    --primary: #f2c811; /* Power BI Yellow Accent */
-    --secondary: #118d95; /* Teal contrast color */
-    --dark-bg: #1f2421;
-}
+    <header>
+        <div class="logo"><span>Akhilesh Raut</span></div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#more-projects">More Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-body {
-    background-color: var(--bg-color);
-    color: var(--text-main);
-    line-height: 1.6;
-}
+    <section id="about" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Hi, I'm <span class="highlight">Akhilesh Raut</span></h1>
+                <h2>Data Analyst | Power BI Developer</h2>
+                <p>I transform raw business data into interactive, actionable dashboards that drive strategic decisions. Specialized in SQL data modeling, Power Query transformations, and advanced DAX calculations.</p>
+                <div class="social-links">
+                    <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <div class="profile-image-wrapper">
+                    <img src="https://avatars.githubusercontent.com/u/138181772?v=4" alt="Akhilesh Raut Profile Photo">
+                </div>
+            </div>
+        </div>
+    </section>
 
-/* Header & Navigation */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 10%;
-    background: var(--dark-bg);
-    color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+    <section id="projects" class="projects-section">
+        <h2 class="section-title">Featured Projects</h2>
+        
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Pharmacy Profitability Analytics</h3>
+                <p class="project-desc">The dashboard analyzes pharmacy sales transactions across multiple European countries, providing insights into sales performance, profitability, product performance, and geographic trends.</p>
+                
+                <div class="powerbi-container">
+                    <iframe title="Pharmacy Profitability Dashboard" src="https://app.powerbi.com/view?r=eyJrIjoiNzAzNjFmOTgtMDM2Mi00ODJmLWJhNDMtMmJhZDZiMGFkMTc4IiwidCI6IjQ2NTRiNmYxLTBlNDctNDU3OS1hOGExLTAyZmU5ZDk0M2M3YiIsImMiOjl9" frameborder="0" allowFullScreen="true"></iframe>
+                </div>
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-}
+                <div class="tags">
+                    <span>Power BI</span>
+                    <span>SQL Server</span>
+                    <span>DAX</span>
+                    <span>Data Modeling</span>
+                </div>
+            </div>
 
-.logo span {
-    color: var(--primary);
-}
+            <div class="project-card">
+                <h3>Procurement Data Analytics</h3>
+                <p class="project-desc">The Procurement Data Analytics Dashboard is an interactive business intelligence solution built in Power BI to analyze procurement operations, supplier performance, compliance, delivery efficiency, and spending behavior from 2022 to 2024. This project was designed to help procurement teams and business stakeholders monitor procurement KPIs, evaluate supplier reliability, identify compliance issues, and uncover cost optimization opportunities using dynamic and insight-driven analytics.</p>
+                
+                <div class="powerbi-container">
+                    <iframe title="Procurement Data Analytics Dashboard" src="https://app.powerbi.com/view?r=eyJrIjoiYTIxZDllZDMtZDI3ZS00ZTU5LWI5ODItMTgxMjQ4ZmI2M2IzIiwidCI6IjQ2NTRiNmYxLTBlNDctNDU3OS1hOGExLTAyZmU5ZDk0M2M3YiIsImMiOjl9" frameborder="0" allowFullScreen="true"></iframe>
+                </div>
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 1.5rem;
-    font-weight: 500;
-    transition: color 0.3s;
-}
+                <div class="tags">
+                    <span>Power BI</span>
+                    <span>Python</span>
+                    <span>Power Query / M</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-nav a:hover {
-    color: var(--primary);
-}
+    <section id="more-projects" class="slider-section">
+        <h2 class="section-title">Additional Analytics Projects</h2>
+        
+        <div class="slider-wrapper">
+            <button class="slide-arrow arrow-left" id="slide-left">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slide-arrow arrow-right" id="slide-right">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <div class="slider-container" id="carousel-track">
+                
+                <div class="slider-card">
+                    <div class="card-image-box">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80" alt="HR Analytics Project">
+                    </div>
+                    <div class="card-body-box">
+                        <h3>HR Employee Attrition Case Study</h3>
+                        <p>An administrative analysis looking into workforce turnover vectors, employee fulfillment parameters, and baseline organizational churn metrics.</p>
+                        <a href="https://github.com/" class="slider-btn" target="_blank">View Project <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
 
-/* Hero Section Split Layout Styling */
-.hero {
-    min-height: 75vh;
-    display: flex;
-    align-items: center;
-    background: linear-gradient(135deg, var(--dark-bg) 60%, #2d312e);
-    color: white;
-    padding: 3rem 10%;
-}
+                <div class="slider-card">
+                    <div class="card-image-box">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80" alt="Fintech Risk Assessment">
+                    </div>
+                    <div class="card-body-box">
+                        <h3>Fintech Credit Risk Modeling</h3>
+                        <p>Constructed evaluation models assessing baseline default metrics and consumer financial stability criteria across varying testing sets.</p>
+                        <a href="https://github.com/" class="slider-btn" target="_blank">View Project <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
 
-.hero-container {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    gap: 4rem;
-}
+                <div class="slider-card">
+                    <div class="card-image-box">
+                        <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=500&q=80" alt="Supply Chain Forecast">
+                    </div>
+                    <div class="card-body-box">
+                        <h3>Inventory Optimization System</h3>
+                        <p>Analyzed historical warehousing transactions to outline baseline demand thresholds and eliminate pipeline product asset gaps.</p>
+                        <a href="https://github.com/" class="slider-btn" target="_blank">View Project <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
 
-.hero-content {
-    flex: 1.2;
-}
+                <div class="slider-card">
+                    <div class="card-image-box">
+                        <img src="https://images.unsplash.com/photo-1535320903710-d993d3d77d29?auto=format&fit=crop&w=500&q=80" alt="Telecom Cohort Analysis">
+                    </div>
+                    <div class="card-body-box">
+                        <h3>Telecom Customer Churn Model</h3>
+                        <p>Conducted subscriber lifespan evaluations using cohort group configurations to isolate subscription drop-off catalysts.</p>
+                        <a href="https://github.com/" class="slider-btn" target="_blank">View Project <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
 
-.hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-}
+            </div>
+        </div>
+    </section>
 
-.hero-content h2 {
-    font-size: 1.5rem;
-    color: var(--text-muted);
-    font-weight: 400;
-    margin-bottom: 1.5rem;
-}
+    <section id="skills" class="skills-section">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+            
+            <div class="skill-box">
+                <div class="skill-header">
+                    <i class="fas fa-code"></i>
+                    <h4>Programming Languages</h4>
+                </div>
+                <div class="tags">
+                    <span>Python</span>
+                    <span>SQL</span>
+                </div>
+            </div>
 
-.highlight {
-    color: var(--primary);
-}
+            <div class="skill-box">
+                <div class="skill-header">
+                    <i class="fas fa-chart-bar"></i>
+                    <h4>BI &amp; Visualization</h4>
+                </div>
+                <div class="tags">
+                    <span>Power BI</span>
+                    <span>Advanced Excel (Pivots, XLOOKUP, Macros)</span>
+                </div>
+            </div>
 
-.hero-content p {
-    max-width: 600px;
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-}
+            <div class="skill-box">
+                <div class="skill-header">
+                    <i class="fas fa-database"></i>
+                    <h4>Databases</h4>
+                </div>
+                <div class="tags">
+                    <span>SQL Server</span>
+                    <span>PostgreSQL</span>
+                    <span>MySQL</span>
+                </div>
+            </div>
 
-.social-links a {
-    color: white;
-    font-size: 1.8rem;
-    margin-right: 1.5rem;
-    transition: color 0.3s;
-}
+            <div class="skill-box">
+                <div class="skill-header">
+                    <i class="fas fa-tools"></i>
+                    <h4>Tools &amp; Infrastructure</h4>
+                </div>
+                <div class="tags">
+                    <span>Jupyter Notebook</span>
+                    <span>Microsoft Fabric</span>
+                </div>
+            </div>
 
-.social-links a:hover {
-    color: var(--primary);
-}
+            <div class="skill-box">
+                <div class="skill-header">
+                    <i class="fas fa-chart-pie"></i>
+                    <h4>Analytics Techniques</h4>
+                </div>
+                <div class="tags">
+                    <span>RFM Analysis</span>
+                    <span>Sessionization</span>
+                    <span>Gaps &amp; Islands</span>
+                    <span>Cohort Analysis</span>
+                    <span>Predictive Forecasting</span>
+                </div>
+            </div>
 
-/* Profile Photo Framing */
-.hero-image {
-    flex: 0.8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+            <div class="skill-box">
+                <div class="skill-header">
+                    <i class="fas fa-calculator"></i>
+                    <h4>Statistical Concepts</h4>
+                </div>
+                <div class="tags">
+                    <span>A/B Testing</span>
+                    <span>Hypothesis Testing</span>
+                    <span>Linear &amp; Logistic Regression</span>
+                    <span>Probability Distributions</span>
+                    <span>Confidence Intervals</span>
+                    <span>Correlation &amp; Variance Analysis</span>
+                </div>
+            </div>
 
-.profile-image-wrapper {
-    width: 280px;
-    height: 280px;
-    border-radius: 50%;
-    border: 5px solid var(--primary);
-    overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    background: #2d312e;
-}
+            <div class="skill-box full-width-skill">
+                <div class="skill-header">
+                    <i class="fas fa-users"></i>
+                    <h4>Professional Core</h4>
+                </div>
+                <div class="tags">
+                    <span>Stakeholder Management</span>
+                    <span>Cross-Functional Collaboration</span>
+                    <span>Data Storytelling</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.profile-image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Keeps image perfectly proportioned without squishing */
-}
+    <section id="certifications" class="certifications-section">
+        <h2 class="section-title">Professional Certifications</h2>
+        <div class="certifications-grid">
+            
+            <div class="cert-card">
+                <div class="cert-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <div class="cert-info">
+                    <h3>Microsoft Certified: Power BI Data Analyst Associate</h3>
+                    <p class="cert-issuer">Credential ID: PL-300</p>
+                    <span class="cert-date">Issued March 2026</span>
+                    <a href="https://your-certificate-link-here.com" class="cert-btn" target="_blank">Verify Credential <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
 
-/* Projects Layout */
-.projects-section, .skills-section {
-    padding: 5rem 10%;
-}
+            <div class="cert-card">
+                <div class="cert-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="cert-info">
+                    <h3>Microsoft Certified: SQL AI Developer Associate</h3>
+                    <p class="cert-issuer">Credential ID: DP-800</p>
+                    <span class="cert-date">Issued April 2026</span>
+                    <a href="https://your-certificate-link-here.com" class="cert-btn" target="_blank">Verify Credential <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
 
-.section-title {
-    text-align: center;
-    font-size: 2.2rem;
-    margin-bottom: 3rem;
-    position: relative;
-}
+        </div>
+    </section>
 
-.section-title::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background: var(--primary);
-    margin: 10px auto 0;
-}
+    <footer id="contact">
+        <p>Interested in collaborating? Let's connect!</p>
+        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        <p class="copy">&copy; 2026 Akhilesh Raut. All rights reserved.</p>
+    </footer>
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
-}
+    <script>
+        const track = document.getElementById('carousel-track');
+        const btnLeft = document.getElementById('slide-left');
+        const btnRight = document.getElementById('slide-right');
 
-.project-card {
-    background: var(--card-bg);
-    border-radius: 8px;
-    padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    border-left: 5px solid var(--primary);
-}
+        // Dynamically compute shift calculations based on active card dimensions
+        btnRight.addEventListener('click', () => {
+            const cardWidth = document.querySelector('.slider-card').offsetWidth + 24;
+            track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        });
 
-.project-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
+        btnLeft.addEventListener('click', () => {
+            const cardWidth = document.querySelector('.slider-card').offsetWidth + 24;
+            track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+        });
+    </script>
 
-.project-desc {
-    color: var(--text-muted);
-    margin-bottom: 1.5rem;
-}
-
-/* Power BI Embed System Rules */
-.powerbi-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    padding-top: 56.25%; /* Aspect Ratio 16:9 */
-    margin-bottom: 1.5rem;
-    border: 1px solid #e0e0e0;
-    border-radius: 4px;
-}
-
-.powerbi-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* Tags System */
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.tags span {
-    background: #f0f2f5;
-    color: #495057;
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 500;
-}
-
-/* Skills Matrix Section Layout */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 1.5rem;
-}
-
-.skill-box {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-    border-top: 3px solid var(--secondary);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.skill-box:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-.skill-header {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1.25rem;
-}
-
-.skill-header i {
-    font-size: 1.4rem;
-    color: var(--secondary);
-}
-
-.skill-header h4 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--dark-bg);
-}
-
-.skill-box .tags span {
-    background: #f8f9fa;
-    border: 1px solid #e9ecef;
-    color: #343a40;
-}
-
-.full-width-skill {
-    grid-column: 1 / -1;
-    border-top: 3px solid var(--primary);
-}
-
-/* Footer styling */
-footer {
-    background: var(--dark-bg);
-    color: white;
-    text-align: center;
-    padding: 3rem 10%;
-}
-
-footer a {
-    color: var(--primary);
-    text-decoration: none;
-}
-
-.copy {
-    margin-top: 1.5rem;
-    font-size: 0.9rem;
-    color: #888;
-}
-
-/* Robust Mobile Responsiveness Override rules */
-@media (max-width: 992px) {
-    .hero-container {
-        flex-direction: column-reverse; /* Drops photo on top on medium tablets/mobiles */
-        gap: 2rem;
-        text-align: center;
-    }
-    .hero-content p {
-        margin: 0 auto 2rem;
-    }
-    .profile-image-wrapper {
-        width: 220px;
-        height: 220px;
-    }
-}
-
-@media (max-width: 768px) {
-    header { padding: 1rem 5%; flex-direction: column; gap: 1rem; }
-    nav a { margin: 0 0.7rem; }
-    .hero h1 { font-size: 2.2rem; }
-    .projects-section, .skills-section { padding: 3rem 5%; }
-    .skills-grid { grid-template-columns: 1fr; }
-}
+</body>
+</html>
