@@ -10,11 +10,13 @@
 <body>
 
     <header>
-        <div class="logo">Data<span>Portfolio</span></div>
+        <div class="logo"><span>Akhilesh Raut</span></div>
         <nav>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
+            <a href="#more-projects">More Projects</a>
             <a href="#skills">Skills</a>
+            <a href="#certifications">Certifications</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -72,6 +74,67 @@
                     <span>Python</span>
                     <span>Power Query / M</span>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="more-projects" class="slider-section">
+        <h2 class="section-title">Additional Analytics Projects</h2>
+        
+        <div class="slider-wrapper">
+            <button class="slide-arrow arrow-left" id="slide-left">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slide-arrow arrow-right" id="slide-right">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <div class="slider-container" id="carousel-track">
+                
+                <div class="slider-card">
+                    <div class="card-image-box">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80" alt="HR Analytics Project">
+                    </div>
+                    <div class="card-body-box">
+                        <h3>HR Employee Attrition Case Study</h3>
+                        <p>An administrative analysis looking into workforce turnover vectors, employee fulfillment parameters, and baseline organizational churn metrics.</p>
+                        <a href="https://github.com/" class="slider-btn" target="_blank">View Project <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="slider-card">
+                    <div class="card-image-box">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80" alt="Fintech Risk Assessment">
+                    </div>
+                    <div class="card-body-box">
+                        <h3>Fintech Credit Risk Modeling</h3>
+                        <p>Constructed evaluation models assessing baseline default metrics and consumer financial stability criteria across varying testing sets.</p>
+                        <a href="https://github.com/" class="slider-btn" target="_blank">View Project <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="slider-card">
+                    <div class="card-image-box">
+                        <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=500&q=80" alt="Supply Chain Forecast">
+                    </div>
+                    <div class="card-body-box">
+                        <h3>Inventory Optimization System</h3>
+                        <p>Analyzed historical warehousing transactions to outline baseline demand thresholds and eliminate pipeline product asset gaps.</p>
+                        <a href="https://github.com/" class="slider-btn" target="_blank">View Project <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="slider-card">
+                    <div class="card-image-box">
+                        <img src="https://images.unsplash.com/photo-1535320903710-d993d3d77d29?auto=format&fit=crop&w=500&q=80" alt="Telecom Cohort Analysis">
+                    </div>
+                    <div class="card-body-box">
+                        <h3>Telecom Customer Churn Model</h3>
+                        <p>Conducted subscriber lifespan evaluations using cohort group configurations to isolate subscription drop-off catalysts.</p>
+                        <a href="https://github.com/" class="slider-btn" target="_blank">View Project <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -165,6 +228,36 @@
                     <span>Data Storytelling</span>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="certifications-section">
+        <h2 class="section-title">Professional Certifications</h2>
+        <div class="certifications-grid">
+            
+            <div class="cert-card">
+                <div class="cert-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <div class="cert-info">
+                    <h3>Microsoft Certified: Power BI Data Analyst Associate</h3>
+                    <p class="cert-issuer">Credential ID: PL-300</p>
+                    <span class="cert-date">Issued March 2026</span>
+                    <a href="https://your-certificate-link-here.com" class="cert-btn" target="_blank">Verify Credential <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="cert-info">
+                    <h3>Microsoft Certified: SQL AI Developer Associate</h3>
+                    <p class="cert-issuer">Credential ID: DP-800</p>
+                    <span class="cert-date">Issued April 2026</span>
+                    <a href="https://your-certificate-link-here.com" class="cert-btn" target="_blank">Verify Credential <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
 
         </div>
     </section>
@@ -174,6 +267,23 @@
         <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
         <p class="copy">&copy; 2026 Akhilesh Raut. All rights reserved.</p>
     </footer>
+
+    <script>
+        const track = document.getElementById('carousel-track');
+        const btnLeft = document.getElementById('slide-left');
+        const btnRight = document.getElementById('slide-right');
+
+        // Dynamically compute shift calculations based on active card dimensions
+        btnRight.addEventListener('click', () => {
+            const cardWidth = document.querySelector('.slider-card').offsetWidth + 24;
+            track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        });
+
+        btnLeft.addEventListener('click', () => {
+            const cardWidth = document.querySelector('.slider-card').offsetWidth + 24;
+            track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+        });
+    </script>
 
 </body>
 </html>
