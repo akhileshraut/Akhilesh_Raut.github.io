@@ -268,22 +268,7 @@
         <p class="copy">&copy; 2026 Akhilesh Raut. All rights reserved.</p>
     </footer>
 
-    <script>
-        const track = document.getElementById('carousel-track');
-        const btnLeft = document.getElementById('slide-left');
-        const btnRight = document.getElementById('slide-right');
-
-        // Dynamically compute shift calculations based on active card dimensions
-        btnRight.addEventListener('click', () => {
-            const cardWidth = document.querySelector('.slider-card').offsetWidth + 24;
-            track.scrollBy({ left: cardWidth, behavior: 'smooth' });
-        });
-
-        btnLeft.addEventListener('click', () => {
-            const cardWidth = document.querySelector('.slider-card').offsetWidth + 24;
-            track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-        });
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
